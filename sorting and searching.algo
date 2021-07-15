@@ -1,0 +1,16 @@
+PROCEDURE searching(VAR Tab : ARRAY, n : INTEGER)
+VAR
+    i,k,value : INTEGER;
+BEGIN
+    FOR i FROM 1 TO n-1 STEP 1 DO 
+      
+       value := Tab[i];
+       k := i;
+      WHILE ((k>0) AND (Tab[k-1]>value)) DO
+          Tab[k] := T[k-1];
+          k := k-1;
+      END_WHILE
+      Tab[k] := value;
+    END_FOR
+       
+END
